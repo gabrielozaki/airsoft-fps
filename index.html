@@ -24,7 +24,7 @@
 </p>
 <p>Altura da arma em relação ao solo durante o disparo</p>
 <p>Gun height from the ground</p>
-<p>Altura/height <input type="text" name="height" id="height"  value="1" onClick='document.getElementById("height").value="";' onkeyup='updateTime(document.getElementById("height").value);fpsToJoule(document.getElementById("fps").value,document.getElementById("weight").value)' /> </p> 
+<p>Altura em metros/height in meters <input type="text" name="height" id="height"  value="1" onClick='document.getElementById("height").value="";' onkeyup='updateTime(document.getElementById("height").value);fpsToJoule(document.getElementById("fps").value,document.getElementById("weight").value)' /> </p> 
 <table border=1 width=40%>
 <tr><td>BB</td><td>FPS</td><td>m/s</td><td>Alcance em Pés<br />Range in feets</td><td>Alcance em metros<br />Range in meters</td></tr>
 <tr><td>.12g</td><td id="fps12">0</td><td id="ms12">0</td><td id='ranfe12'>0</td><td id='ranme12'>0</td></tr>
@@ -40,8 +40,5 @@
 <tr><td>.50g</td><td id="fps50">0</td><td id="ms50">0</td><td id='ranfe50'>0</td><td id='ranme50'>0</td></tr>
 </table>
 <script src="airfps.js"></script>
-<script>
-//document.getElementById("fps12").innerHTML = "";
-</script>
 </body>
 </html>
