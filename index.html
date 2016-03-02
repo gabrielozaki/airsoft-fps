@@ -1,0 +1,47 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>Calculo de fps</title>
+</head>
+<body>
+<p>Entre com a energia cinética(em joule) ou com o fps da arma com o peso da bb</p>
+<p>Enter the kinetic energy (in joules) or the aeg fps with weight bb</p>
+<p>Energia/Energy <input type="text" name="energy" id="energy"  value="0.0" onClick='document.getElementById("energy").value="";document.getElementById("fps").value=""' onkeyup='jouleToFps(document.getElementById("energy").value)' /></p>
+<p>FPS <input type="text" name="fps" id="fps"  value="0" onClick='document.getElementById("fps").value="";document.getElementById("energy").value=""' onkeyup='fpsToJoule(document.getElementById("fps").value,document.getElementById("weight").value)' /> peso/weight bb 
+<select id="weight" name="weight" onchange='fpsToJoule(document.getElementById("fps").value,document.getElementById("weight").value)'>
+<option value="0.12">.12g</option>
+<option value="0.20" selected >.20g</option>
+<option value="0.23">.23g</option>
+<option value="0.25">.25g</option>
+<option value="0.28">.28g</option>
+<option value="0.30">.30g</option>
+<option value="0.33">.33g</option>
+<option value="0.36">.36g</option>
+<option value="0.40">.40g</option>
+<option value="0.43">.43g</option>
+<option value="0.50">.50g</option>
+</select>
+</p>
+<p>Altura da arma em relação ao solo durante o disparo</p>
+<p>Gun height from the ground</p>
+<p>Altura/height <input type="text" name="height" id="height"  value="1" onClick='document.getElementById("height").value="";' onkeyup='updateTime(document.getElementById("height").value);fpsToJoule(document.getElementById("fps").value,document.getElementById("weight").value)' /> </p> 
+<table border=1 width=40%>
+<tr><td>BB</td><td>FPS</td><td>m/s</td><td>Alcance em Pés<br />Range in feets</td><td>Alcance em metros<br />Range in meters</td></tr>
+<tr><td>.12g</td><td id="fps12">0</td><td id="ms12">0</td><td id='ranfe12'>0</td><td id='ranme12'>0</td></tr>
+<tr><td>.20g</td><td id="fps20">0</td><td id="ms20">0</td><td id='ranfe20'>0</td><td id='ranme20'>0</td></tr>
+<tr><td>.23g</td><td id="fps23">0</td><td id="ms23">0</td><td id='ranfe23'>0</td><td id='ranme23'>0</td></tr>
+<tr><td>.25g</td><td id="fps25">0</td><td id="ms25">0</td><td id='ranfe25'>0</td><td id='ranme25'>0</td></tr>
+<tr><td>.28g</td><td id="fps28">0</td><td id="ms28">0</td><td id='ranfe28'>0</td><td id='ranme28'>0</td></tr>
+<tr><td>.30g</td><td id="fps30">0</td><td id="ms30">0</td><td id='ranfe30'>0</td><td id='ranme30'>0</td></tr>
+<tr><td>.33g</td><td id="fps33">0</td><td id="ms33">0</td><td id='ranfe33'>0</td><td id='ranme33'>0</td></tr>
+<tr><td>.36g</td><td id="fps36">0</td><td id="ms36">0</td><td id='ranfe36'>0</td><td id='ranme36'>0</td></tr>
+<tr><td>.40g</td><td id="fps40">0</td><td id="ms40">0</td><td id='ranfe40'>0</td><td id='ranme40'>0</td></tr>
+<tr><td>.43g</td><td id="fps43">0</td><td id="ms43">0</td><td id='ranfe43'>0</td><td id='ranme43'>0</td></tr>
+<tr><td>.50g</td><td id="fps50">0</td><td id="ms50">0</td><td id='ranfe50'>0</td><td id='ranme50'>0</td></tr>
+</table>
+<script src="airfps.js"></script>
+<script>
+//document.getElementById("fps12").innerHTML = "";
+</script>
+</body>
+</html>
